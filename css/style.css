@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#idOriginal {
+    width: 300px;
+    min-height: 200px;
+    margin: 20px;
+    float: left;
+    background-color: goldenrod;
+}
+
+#idTranslated {
+    width: 300px;
+    min-height: 200px;
+    margin: 20px;
+    float: left;
+    background-color: coral;
+}
