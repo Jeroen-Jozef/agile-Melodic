@@ -1,0 +1,18 @@
+.header {
+    padding: 100px;
+    text-align: center;
+    background: #333;
+    color: #ED4F06;
+    font-size: 60px;
+}
+.header img{
+    float: left;
+    width: 250px;
+    height: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -50px;
+    margin-left: -30px;
+
+
+}
