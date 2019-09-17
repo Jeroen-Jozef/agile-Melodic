@@ -13,7 +13,7 @@ In this exercise we (see below) are learning the agile philosopy through the Scr
 * use google analytics
 
 ## Collaborators
-[Ines Abbes] (https://github.com/InesAbbes/)
+[Ines Abbes](https://github.com/InesAbbes/)
 
 <!--
 
