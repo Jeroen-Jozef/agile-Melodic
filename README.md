@@ -14,9 +14,13 @@ In this exercise we (see below) are learning the agile philosopy through the Scr
 
 ## Collaborators
 [Ines Abbes](https://github.com/InesAbbes/)
+
 [Manny Apsel](https://github.com/Manny-Apsel/)
+
 [Bernardo Martelli](https://github.com/bermarte/)
+
 [Jeroen Hendrickx](https://github.com/Jeroen-Jozef/)
+
 
 <!--
 
