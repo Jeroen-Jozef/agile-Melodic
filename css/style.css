@@ -27,6 +27,11 @@ footer {
     line-height:25px;
 }
 
+.email {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
 
 
 
