@@ -12,7 +12,7 @@ function getData(artist, song) {
     song = song.replace(/\s/g, "%2520");
 
     //michael%2520jackson
-    url = "https://api-gateway-becode.herokuapp.com/?goto=http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect%3Fartist%3D"+artist+"%26song%3D"+song;
+    url = "https://api-gateway-becode.herokuapp.com/?goto=http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect%3Fartist%3D" + artist + "%26song%3D" + song;
     //right one: https://api-gateway-becode.herokuapp.com/?goto=http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect%3Fartist%3Dmichael%2520jackson%26song%3Dthriller
     console.log(url);
     fetch(url, {
@@ -30,23 +30,35 @@ function getData(artist, song) {
 
             text = xmlDoc.getElementsByTagName('Lyric')[0].innerHTML;
             //text = xmlDoc.getElementsByTagName('Lyric')[0].childNodes[0];
-            var input = text;
+            console.log(text);
+            var textArray = text.split("\n");
+            console.log(textArray);
 
-            document.getElementById("results").innerHTML = "<pre>"+text+"</pre>";
+            for (let i = 0; i < textArray.length; i++) {
+                if (textArray[i] === "") {
+                    document.getElementById("results").appendChild(document.createElement("br"));
+                } else {
+                    var paragraph = document.createElement("p");
+                    paragraph.innerHTML = textArray[i];
+                    document.getElementById("results").appendChild(paragraph);
+                }
+            }
 
-            var inputArray = input.split("\n");
-            console.log(inputArray);
-            console.log(inputArray.length);
-
-            for (let i = 0; i < inputArray.length; i++) {
-                fetchTranslateText(inputArray[i], "en", "nl")
+            for (let i = 0; i < textArray.length; i++) {
+                if (textArray[i] === "") {
+                    textArray[i] = "--"
+                }
+                fetchTranslateText(textArray[i], "en", "nl")
                     .then(function (data) {
                         returnText(data);
-                    });
+                    })
             }
 
 
-
+            console.log(translateArray);
+            var test = document.createElement("p");
+            test.innerHTML = "test";
+            document.getElementById("idTranslation").appendChild(test);
 
         })
 
@@ -61,28 +73,28 @@ async function fetchTranslateText(text, originalLanguageCode, translatedLanguage
     return response.json();
 }
 
-//dummy input
-/*var input = "[Verse 1: Pharrell]\n" +
-    "Like the legend of the phoenix\n" +
-    "All ends with beginnings\n" +
-    "What keeps the planet spinning\n" +
-    "The force from the beginning";*/
-//put a line of text in array
-/*inputArray = input.split("\n");
-console.log(inputArray);
-console.log(inputArray.length);*/
-
 //process text and return translated text
 function returnText(data) {
-    console.log(data);
     var text = data.text[0];
-    document.getElementById("idTranslation").innerText += text;
-    document.getElementById("idTranslation").appendChild(document.createElement("br"));
+    if (text === "") {
+        document.getElementById("results").appendChild(document.createElement("br"));
+    } else {
+        var paragraph = document.createElement("p");
+        paragraph.innerHTML = text;
+        document.getElementById("idTranslation").appendChild(paragraph);
+    }
+
+
 }
 
-/*for (let i = 0; i < inputArray.length; i++) {
-    fetchTranslateText(inputArray[i], "en", "nl")
-        .then(function (data) {
-            returnText(data);
-        });
-}*/
+function putTranslationInIndex(array) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === "") {
+            document.getElementById("results").appendChild(document.createElement("br"));
+        } else {
+            var paragraph = document.createElement("p");
+            paragraph.innerHTML = array[i];
+            document.getElementById("results").appendChild(paragraph);
+        }
+    }
+}
