@@ -14,3 +14,11 @@
     margin-top: -50px;
     margin-left: -30px;
 }
+footer {
+    background-color: #333333;
+    color: #e5e5e5;
+    position: relative;
+    padding:45px 0 20px;
+    font-size:20px;
+    line-height:25px;
+}
