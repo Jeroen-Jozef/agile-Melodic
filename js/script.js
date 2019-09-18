@@ -1,9 +1,4 @@
 document.getElementById("idForm").addEventListener("submit", function () {
-    console.log(document.getElementById("idSearchBar").value);
-});
-
-
-document.getElementById("idForm").addEventListener("submit", function () {
     song = document.getElementById("idSearchBar").value;
     artist = document.getElementById("artist").value;
     getData(artist, song);
@@ -35,8 +30,22 @@ function getData(artist, song) {
 
             text = xmlDoc.getElementsByTagName('Lyric')[0].innerHTML;
             //text = xmlDoc.getElementsByTagName('Lyric')[0].childNodes[0];
+            var input = text;
 
             document.getElementById("results").innerHTML = "<pre>"+text+"</pre>";
+
+            var inputArray = input.split("\n");
+            console.log(inputArray);
+            console.log(inputArray.length);
+
+            for (let i = 0; i < inputArray.length; i++) {
+                fetchTranslateText(inputArray[i], "en", "nl")
+                    .then(function (data) {
+                        returnText(data);
+                    });
+            }
+
+
 
 
         })
@@ -53,15 +62,15 @@ async function fetchTranslateText(text, originalLanguageCode, translatedLanguage
 }
 
 //dummy input
-var input = "[Verse 1: Pharrell]\n" +
+/*var input = "[Verse 1: Pharrell]\n" +
     "Like the legend of the phoenix\n" +
     "All ends with beginnings\n" +
     "What keeps the planet spinning\n" +
-    "The force from the beginning";
+    "The force from the beginning";*/
 //put a line of text in array
-inputArray = input.split("\n");
+/*inputArray = input.split("\n");
 console.log(inputArray);
-console.log(inputArray.length);
+console.log(inputArray.length);*/
 
 //process text and return translated text
 function returnText(data) {
@@ -71,9 +80,9 @@ function returnText(data) {
     document.getElementById("idTranslation").appendChild(document.createElement("br"));
 }
 
-for (let i = 0; i < inputArray.length; i++) {
+/*for (let i = 0; i < inputArray.length; i++) {
     fetchTranslateText(inputArray[i], "en", "nl")
         .then(function (data) {
             returnText(data);
         });
-}
+}*/
