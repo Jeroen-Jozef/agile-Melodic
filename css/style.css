@@ -32,15 +32,10 @@ footer {
     direction: rtl;
 }
 
-
-
-
-
 #idOriginal {
     width: 300px;
     min-height: 200px;
     margin: 20px;
-    float: left;
     background-color: goldenrod;
 }
 
@@ -48,7 +43,6 @@ footer {
     width: 300px;
     min-height: 200px;
     margin: 20px;
-    float: left;
     background-color: coral;
 }
 
