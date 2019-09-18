@@ -33,17 +33,20 @@ footer {
 }
 
 #idOriginal {
-    width: 300px;
+    width: 35vw;
     min-height: 200px;
     margin: 20px;
     background-color: goldenrod;
 }
 
 #idTranslated {
-    width: 300px;
+    width: 35vw;
     min-height: 200px;
     margin: 20px;
     background-color: coral;
+}
+#idTranslation{
+    display: flex;
 }
 
 
