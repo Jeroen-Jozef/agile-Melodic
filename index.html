@@ -2,21 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <title>Melodic: translate your favourite songs</title>
 </head>
 <body>
+<header>
+    <div class="header">
+       <img src="img/logo.png" alt="logo">
+        <p>Translate your songs</p>
+    </div>
+</header>
 <section>
     <form action="#" id="idForm">
         <input type="text" id="idSearchBar" placeholder="Search Your Song!">
+        <input type="text" id="artist" placeholder="Group/artist">
         <input type="submit" id="idSearchButton">
     </form>
+    <div id="results"></div>
 </section>
 <section id="idTranslation">
 
 </section>
+<script src="js/script.js"></script>
+
+
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-md-0 mt-3">
+                <h4 class="text-uppercase">MELODIC</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing eli</p>
+            </div>
+        <ul>
+            <li><a class="top" href="#" id="topbutton">Back to Top</a></li>
+        </ul>
+            <div class="col-xs-6 col-md-3">
+                <h4 class="text-uppercase">Contact Us</h4>
+                <ul class="list-unstyled">
+                    <li>Sint-Pietersvliet 7</li>
+                    <li>2000 Antwerpen</li>
+                    <li>Belgium</li>
+                    <li><a href="mailto:contact@Melodic.com">contact@Melodic.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by
+                    <a href="#">MELODIC</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 <script src="js/script.js"></script>
 </body>
 </html>
