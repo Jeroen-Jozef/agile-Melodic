@@ -1,8 +1,10 @@
 document.getElementById("idSearchButton").addEventListener("click", async function () {
     song = document.getElementById("idSearchBar").value;
     artist = document.getElementById("artist").value;
+    countryCode = document.getElementById("idLanguageCode").value;
+    console.log(countryCode);
     await reset();
-    getData(artist, song);
+    getData(artist, song, countryCode);
 });
 
 
@@ -18,7 +20,7 @@ function errorMsg(msg){
 }
 
 //fetch search song
-function getData(artist, song) {
+function getData(artist, song, countryCodeTranslation) {
     artist = artist.replace(/\s/g, "%2520");
     song = song.replace(/\s/g, "%2520");
 
@@ -70,7 +72,7 @@ function getData(artist, song) {
                 if (textArray[i] === "") {
                     textArray[i] = "|"
                 }
-                await fetchTranslateText(textArray[i], "en", "nl")
+                await fetchTranslateText(textArray[i], countryCodeTranslation)
                     .then(function (data) {
                         returnText(data);
                         if (i === textArray.length-1){
@@ -88,8 +90,8 @@ function getData(artist, song) {
 }
 
 //async functie to pick up json data
-async function fetchTranslateText(text, originalLanguageCode, translatedLanguageCode) {
-    let response = await fetch(`https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20190917T143143Z.c1229abdc907b884.5520b5430c18e7eb1926dd0166c1bd73473c23f0&text=${text}&lang=${originalLanguageCode}-${translatedLanguageCode}`);
+async function fetchTranslateText(text, translatedLanguageCode) {
+    let response = await fetch(`https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20190917T143143Z.c1229abdc907b884.5520b5430c18e7eb1926dd0166c1bd73473c23f0&text=${text}&lang=${translatedLanguageCode}`);
     return response.json();
 }
 
