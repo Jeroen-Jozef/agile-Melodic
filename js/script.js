@@ -15,6 +15,7 @@ function reset(){
 //error message
 function errorMsg(msg){
     alert(msg);
+    document.querySelector("input[type='button']").disabled = false;
 }
 
 //fetch search song
@@ -84,6 +85,7 @@ function getData(artist, song) {
 
         .catch(err => {
             errorMsg("no data found");
+            document.querySelector("input[type='button']").disabled = false;
         });
 }
 
