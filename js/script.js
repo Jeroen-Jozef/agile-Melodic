@@ -1,4 +1,5 @@
-document.getElementById("idForm").addEventListener("click", function () {
+
+document.getElementById("idSearchButton").addEventListener("click", function () {
     song = document.getElementById("idSearchBar").value;
     artist = document.getElementById("artist").value;
     reset();
@@ -27,7 +28,7 @@ function getData(artist, song) {
             return response.text();
         })
 
-        .then(function (data) {
+        .then(async function (data) {
 
             let parser = new DOMParser(),
                 xmlDoc = parser.parseFromString(data, 'text/xml');
@@ -53,7 +54,7 @@ function getData(artist, song) {
                 if (textArray[i] === "") {
                     textArray[i] = "|"
                 }
-                fetchTranslateText(textArray[i], "en", "nl")
+                await fetchTranslateText(textArray[i], "en", "nl")
                     .then(function (data) {
                         returnText(data);
                     })
