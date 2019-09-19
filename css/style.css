@@ -49,4 +49,7 @@ footer {
     display: flex;
 }
 
+#idSearchButton {
+    margin-top: -5px;
+}
 
