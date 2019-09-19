@@ -1,16 +1,20 @@
-document.getElementById("idForm").addEventListener("submit", function () {
+document.getElementById("idForm").addEventListener("click", function () {
     song = document.getElementById("idSearchBar").value;
     artist = document.getElementById("artist").value;
+    reset();
     getData(artist, song);
 });
 
+//rest results
+function reset(){
+    listOriginal = document.getElementById("idOriginal").innerHTML ="";
+    listTranslated = document.getElementById("idTranslated").innerHTML ="";
+}
 
 //fetch search song
 function getData(artist, song) {
-
     artist = artist.replace(/\s/g, "%2520");
     song = song.replace(/\s/g, "%2520");
-
     //michael%2520jackson
     url = "https://api-gateway-becode.herokuapp.com/?goto=http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect%3Fartist%3D" + artist + "%26song%3D" + song;
     //right one: https://api-gateway-becode.herokuapp.com/?goto=http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect%3Fartist%3Dmichael%2520jackson%26song%3Dthriller
@@ -32,7 +36,7 @@ function getData(artist, song) {
             //text = xmlDoc.getElementsByTagName('Lyric')[0].childNodes[0];
             console.log(text);
             var textArray = text.split("\n");
-            console.log(textArray);
+            console.log("text fetched",textArray);
 
             for (let i = 0; i < textArray.length; i++) {
                 if (textArray[i] === "") {
@@ -44,6 +48,7 @@ function getData(artist, song) {
                 }
             }
 
+
             for (let i = 0; i < textArray.length; i++) {
                 if (textArray[i] === "") {
                     textArray[i] = "|"
@@ -53,6 +58,8 @@ function getData(artist, song) {
                         returnText(data);
                     })
             }
+
+
 
         })
 
