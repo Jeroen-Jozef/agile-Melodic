@@ -17,7 +17,6 @@
     padding-bottom: 10px;
     margin-top: -50px;
     margin-left: -30px;
-
 }
 footer {
     background-color: #333333;
@@ -46,17 +45,20 @@ footer ul{
 
 
 #idOriginal {
-    width: 300px;
+    width: 35vw;
     min-height: 200px;
     margin: 20px;
     background-color: goldenrod;
 }
 
 #idTranslated {
-    width: 300px;
+    width: 35vw;
     min-height: 200px;
     margin: 20px;
     background-color: coral;
+}
+#idTranslation{
+    display: flex;
 }
 .footer a:hover {
     padding: 20px;
@@ -71,4 +73,7 @@ footer ul{
 }
 
 
+#idSearchButton {
+    margin-top: -5px;
+}
 

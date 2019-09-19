@@ -24,6 +24,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Melodic: translate your favourite songs</title>
 </head>
 <body>
@@ -39,22 +40,27 @@
             <a class="navbar-brand" href="#">MELODIC</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Contact</a></li>
-
+            <li><a href="#">Contact</a></li>
         </ul>
-        <form class="navbar-form navbar-left"id="idForm">
+        <form class="navbar-form navbar-left" id="idForm">
             <div class="form-group">
+                <label for="idSearchBar">
                 <input type="text" class="form-control" placeholder="Search Your Song!" name="search" id="idSearchBar">
+                </label>
+                <label for="artist">
                 <input type="text" class="form-control" placeholder="Group/artist" name="search" id="artist">
+                </label>
             </div>
             <button type="submit" class="btn btn-default" id="idSearchButton">Submit</button>
         </form>
     </div>
 </nav>
-<section id="idTranslation" class="row">
-    <div id="idOriginal" class="col-md-6 mt-md-0 mt-3"></div>
-    <div id="idTranslated" class="col-md-6 mt-md-0 mt-3"></div>
-</section>
+<div class="container">
+    <section id="idTranslation" class="row justify-content-center">
+        <div id="idOriginal" class="col-md-6 mt-md-0 mt-3"></div>
+        <div id="idTranslated" class="col-md-6 mt-md-0 mt-3"></div>
+    </section>
+</div>
 <footer class="footer mt-5">
     <div class="container">
         <div class="row">
@@ -79,6 +85,7 @@
                     <li>Belgium</li>
                 </ul>
                     <ul><span class="email"><a href="mailto:melodicbvba@gmail.com">moc.liamg@abvbcidolem</a></span></ul>
+                </div>
             </address>
         </div>
     </div>
@@ -99,6 +106,7 @@
             <a href="#"><small style="color:white" class="fa fa-lg fa-facebook pull-right">  </small></a>
         </div>
     </section>
+</footer>
 <script src="js/script.js"></script>
 </body>
 </html>
