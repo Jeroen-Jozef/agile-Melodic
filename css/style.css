@@ -40,7 +40,7 @@ footer h4{
     color: #ED4F06;
 }
 footer ul{
-    line-height:2em
+    line-height:2em;
 }
 
 
@@ -67,7 +67,6 @@ footer ul{
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
-    border-radius: 50%;
     color: white;
     opacity: 0.7;
 }
