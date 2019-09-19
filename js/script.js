@@ -36,11 +36,11 @@ function getData(artist, song) {
 
             for (let i = 0; i < textArray.length; i++) {
                 if (textArray[i] === "") {
-                    document.getElementById("results").appendChild(document.createElement("br"));
+                    document.getElementById("idOriginal").appendChild(document.createElement("br"));
                 } else {
                     var paragraph = document.createElement("p");
                     paragraph.innerHTML = textArray[i];
-                    document.getElementById("results").appendChild(paragraph);
+                    document.getElementById("idOriginal").appendChild(paragraph);
                 }
             }
 
@@ -53,12 +53,6 @@ function getData(artist, song) {
                         returnText(data);
                     })
             }
-
-
-            console.log(translateArray);
-            var test = document.createElement("p");
-            test.innerHTML = "test";
-            document.getElementById("idTranslation").appendChild(test);
 
         })
 
@@ -77,10 +71,10 @@ async function fetchTranslateText(text, originalLanguageCode, translatedLanguage
 function returnText(data) {
     var text = data.text[0];
     if (text === "|") {
-        document.getElementById("idTranslation").appendChild(document.createElement("br"));
+        document.getElementById("idTranslated").appendChild(document.createElement("br"));
     } else {
         var paragraph = document.createElement("p");
         paragraph.innerHTML = text;
-        document.getElementById("idTranslation").appendChild(paragraph);
+        document.getElementById("idTranslated").appendChild(paragraph);
     }
 }
