@@ -17,20 +17,33 @@
     padding-bottom: 10px;
     margin-top: -50px;
     margin-left: -30px;
+
 }
 footer {
     background-color: #333333;
-    color: #ED4F06;
+    color: white;
     position: relative;
     padding:45px 0 20px;
     font-size:20px;
-    line-height:25px;
+    display: flex;
+    line-height: 2em
 }
-
 .email {
     unicode-bidi: bidi-override;
     direction: rtl;
+
 }
+address h4{
+    color: #ED4F06;
+
+}
+footer h4{
+    color: #ED4F06;
+}
+footer ul{
+    line-height:2em
+}
+
 
 #idOriginal {
     width: 300px;
@@ -45,5 +58,17 @@ footer {
     margin: 20px;
     background-color: coral;
 }
+.footer a:hover {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    color: white;
+    opacity: 0.7;
+}
+
 
 
