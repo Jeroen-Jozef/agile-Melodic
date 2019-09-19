@@ -1,4 +1,5 @@
 document.getElementById("idSearchButton").addEventListener("click", async function () {
+
     song = document.getElementById("idSearchBar").value;
     artist = document.getElementById("artist").value;
     await reset();
@@ -12,14 +13,19 @@ function reset(){
 }
 
 //error message
-function errorMsg(){
-    alert("no data found");
+function errorMsg(msg){
+    alert(msg);
 }
 
 //fetch search song
 function getData(artist, song) {
     artist = artist.replace(/\s/g, "%2520");
     song = song.replace(/\s/g, "%2520");
+
+    if (artist === "" || song===""){
+        errorMsg("please fill in the form");
+        return;
+    }
 
     url = `https://api-gateway-becode.herokuapp.com/?goto=http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect%3Fartist%3D${artist}%26song%3D${song}`;
 
@@ -40,7 +46,7 @@ function getData(artist, song) {
             text = xmlDoc.getElementsByTagName('Lyric')[0].innerHTML;
 
             if (text ==""){
-                errorMsg();
+                errorMsg("no data found");
                 return;
             }
 
@@ -77,7 +83,7 @@ function getData(artist, song) {
         })
 
         .catch(err => {
-            errorMsg();
+            errorMsg("no data found");
         });
 }
 
