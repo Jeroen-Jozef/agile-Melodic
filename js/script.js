@@ -1,12 +1,12 @@
 document.getElementById("idSearchButton").addEventListener("click", async function () {
-
     song = document.getElementById("idSearchBar").value;
     artist = document.getElementById("artist").value;
     await reset();
     getData(artist, song);
 });
 
-//rest results
+
+//reset results
 function reset(){
     document.getElementById("idOriginal").innerHTML = "";
     document.getElementById("idTranslated").innerHTML = "";
@@ -39,6 +39,7 @@ function getData(artist, song) {
         })
 
         .then(async function (data) {
+            document.querySelector("input[type='button']").disabled = true;
 
             let parser = new DOMParser(),
                 xmlDoc = parser.parseFromString(data, 'text/xml');
@@ -69,17 +70,14 @@ function getData(artist, song) {
                 if (textArray[i] === "") {
                     textArray[i] = "|"
                 }
-                if (document.getElementById("idSearchButton").onclick === true){
-                    break;
-                }
                 await fetchTranslateText(textArray[i], "en", "nl")
                     .then(function (data) {
                         returnText(data);
+                        if (i === textArray.length-1){
+                            document.querySelector("input[type='button']").disabled = false;
+                        }
                     })
             }
-
-
-
 
 
         })
