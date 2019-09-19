@@ -1,24 +1,28 @@
-
-document.getElementById("idSearchButton").addEventListener("click", function () {
+document.getElementById("idSearchButton").addEventListener("click", async function () {
     song = document.getElementById("idSearchBar").value;
     artist = document.getElementById("artist").value;
-    reset();
+    await reset();
     getData(artist, song);
 });
 
 //rest results
 function reset(){
-    listOriginal = document.getElementById("idOriginal").innerHTML ="";
-    listTranslated = document.getElementById("idTranslated").innerHTML ="";
+    document.getElementById("idOriginal").innerHTML = "";
+    document.getElementById("idTranslated").innerHTML = "";
+}
+
+//error message
+function errorMsg(){
+    alert("no data found");
 }
 
 //fetch search song
 function getData(artist, song) {
     artist = artist.replace(/\s/g, "%2520");
     song = song.replace(/\s/g, "%2520");
-    //michael%2520jackson
-    url = "https://api-gateway-becode.herokuapp.com/?goto=http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect%3Fartist%3D" + artist + "%26song%3D" + song;
-    //right one: https://api-gateway-becode.herokuapp.com/?goto=http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect%3Fartist%3Dmichael%2520jackson%26song%3Dthriller
+
+    url = `https://api-gateway-becode.herokuapp.com/?goto=http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect%3Fartist%3D${artist}%26song%3D${song}`;
+
     console.log(url);
     fetch(url, {
         "method": "GET",
@@ -34,7 +38,12 @@ function getData(artist, song) {
                 xmlDoc = parser.parseFromString(data, 'text/xml');
 
             text = xmlDoc.getElementsByTagName('Lyric')[0].innerHTML;
-            //text = xmlDoc.getElementsByTagName('Lyric')[0].childNodes[0];
+
+            if (text ==""){
+                errorMsg();
+                return;
+            }
+
             console.log(text);
             var textArray = text.split("\n");
             console.log("text fetched",textArray);
@@ -54,6 +63,9 @@ function getData(artist, song) {
                 if (textArray[i] === "") {
                     textArray[i] = "|"
                 }
+                if (document.getElementById("idSearchButton").onclick === true){
+                    break;
+                }
                 await fetchTranslateText(textArray[i], "en", "nl")
                     .then(function (data) {
                         returnText(data);
@@ -65,7 +77,7 @@ function getData(artist, song) {
         })
 
         .catch(err => {
-            console.log(err);
+            errorMsg();
         });
 }
 
