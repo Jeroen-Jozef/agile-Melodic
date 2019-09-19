@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 .header {
     padding: 100px;
     text-align: center;
@@ -9,6 +10,7 @@
     color: #ED4F06;
     font-size: 60px;
 }
+
 .header img{
     float: left;
     width: 250px;
@@ -18,6 +20,7 @@
     margin-top: -50px;
     margin-left: -30px;
 }
+
 footer {
     background-color: #333333;
     color: white;
@@ -25,24 +28,29 @@ footer {
     padding:45px 0 20px;
     font-size:20px;
     display: flex;
-    line-height: 2em
+    line-height: 1.5em;
 }
+
 .email {
     unicode-bidi: bidi-override;
     direction: rtl;
-
 }
+
 address h4{
     color: #ED4F06;
-
 }
+
+address{
+    margin-left: 100px;
+}
+
 footer h4{
     color: #ED4F06;
 }
+
 footer ul{
     line-height:2em;
 }
-
 
 #idOriginal {
     width: 35vw;
@@ -71,8 +79,22 @@ footer ul{
     opacity: 0.7;
 }
 
-
 #idSearchButton {
     margin-top: -5px;
+}
+
+.parallax {
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+#id-parllax-image {
+    background-image: url("../img/youare.jpeg");
+}
+
+#id-parllax-image1 {
+    background-image: url("../img/themusic.jpeg");
 }
 
