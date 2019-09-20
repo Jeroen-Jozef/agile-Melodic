@@ -17,25 +17,29 @@
 
     <meta charset="UTF-8">
     <meta name="description" content="Translate your favourite songs online, from any language into any language">
+<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+=======
     <meta name="viewport" content="width=device-width initial-scale=1.0, minimum-scale=1.0">
+>>>>>>> 4096decc2451cc28853d850f2f28f829cde89fa8
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
 
     <title>Melodic: translate your favourite songs</title>
 </head>
-<body>
+<body class="parallax">
 <header>
     <section class="header">
         <img src="img/logo.png" alt="Melodic logo">
-        <p class="reveal"><span class="showUp">Translate&nbsp;</span><span class=""slideIn>your songs</span></p>
+        <p class="reveal"><span class="showUp">Translate your songs</span></p>
     </section>
 </header>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse toLeft">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">MELODIC</a>
@@ -71,21 +75,23 @@
         </form>
     </div>
 </nav>
-<!-- parallax -->
-<div class="parallax" id="id-parllax-image"></div>
-<div class="container">
-    <section id="idTranslation" class="row justify-content-center">
-        <div id="idOriginal" class="col-md-6 mt-md-0 mt-3"></div>
-        <div id="idTranslated" class="col-md-6 mt-md-0 mt-3"></div>
+<!-- parallax
+<div class="parallax" id="id-parllax-image"></div>-->
 
-        <div id="video">
+<section class="container">
+<div class="row justify-content-center text-center withPadding">
 
+        <div id="idOriginal" class="col-md-6 col-md-6 mt-3 original">
+            <strong>Original Text</strong>
         </div>
-
-    </section>
+        <div id="idTranslated" class="col-md-6 col-md-6 mt-3 translated">
+                <strong>Translated Text</strong>
+        </div>
 </div>
-<!-- parallax-->
-<div class="parallax" id="id-parllax-image1"></div>
+
+</section>
+<!-- parallax
+<div class="parallax" id="id-parllax-image1"></div>-->
 
 <footer class="footer mt-5">
     <div class="container">
@@ -124,12 +130,12 @@
         </div>
     </div>
     <section class="footer">
-        <div class="container text-left">
+        <div class="container text-left" id ="icons">
+            <a href="#"><small style="color:white" class="fa fa-lg fa-skype pull-right"> </small></a>
             <a href="#"><small style="color:white" class="fa fa-lg fa-google-plus pull-right"> </small></a>
             <a href="#"><small style="color:white" class="fa fa-lg fa-linkedin pull-right"> </small></a>
             <a href="#"><small style="color:white" class="fa fa-lg fa-twitter pull-right"> </small></a>
             <a href="#"><small style="color:white" class="fa fa-lg fa-facebook pull-right"> </small></a>
-            <a href="#"><small style="color:white" class="fa fa-lg fa-skype pull-right"> </small></a>
         </div>
     </section>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>

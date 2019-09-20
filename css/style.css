@@ -22,7 +22,7 @@
 
 .showUp {
     width:0px;
-    animation: reveal 7s infinite;
+    animation: reveal 5s 1;
 }
 
 @keyframes reveal {
@@ -33,22 +33,9 @@
     100% {opacity:0;width:355px;}
 }
 
-.reveal {
 
-}
 
-.slideIn {
-    display: block;
-    margin-left:-355px;
-    animation: slidein 7s infinite;
-}
 
-@keyframes slidein {
-    0% { margin-left:-800px; }
-    20% { margin-left:-800px; }
-    35% { margin-left:0px; }
-    100% { margin-left:0px; }
-}
 
 footer {
     background-color: #333333;
@@ -102,6 +89,7 @@ footer ul{
     padding: 12px;
     margin: 20px;
     background-color: coral;
+    opacity: 1;
     border-radius: 10px;
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
@@ -112,8 +100,17 @@ footer ul{
     width: 20vw;
 
 }
+.container-translation{
+    /*position: relative;
+    top: -300px;
+
+     */
+}
 #idTranslation{
     display: flex;
+    padding-top: 20px;
+    padding-bottom: 25px;
+
 }
 .footer a:hover {
     padding: 20px;
@@ -127,17 +124,19 @@ footer ul{
 
 }
 
+
 #idSearchButton {
     margin-top: -5px;
 }
 
 .parallax {
     height: 500px;
+    margin: -21px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-image: url("../img/youare.jpeg"), url("../img/themusic.jpeg");
 }
 
 #id-parllax-image {
@@ -165,4 +164,19 @@ footer ul{
 }
 #myBtn:hover {
     background-color: #555;
+}
+.withPadding{
+    padding-bottom: 50px;
+    font-size: 18px;
+
+}
+.toLeft{
+    padding-left: 20px;
+}
+#icons{
+    margin-right: 120px;
+}
+.withPadding strong{
+    display: block;
+    padding-bottom: 20px;
 }
