@@ -85,15 +85,6 @@ function getData(artist, song, countryCodeTranslation) {
                     })
             }
 
-            //attach video
-            let vid = "<div class='vid-container'>\n" +
-                "                <iframe class='vid' frameborder='0' wmode='Opaque' allowfullscreen='' src='https://www.youtube.com/embed/oqDRPoPDehE?wmode=transparent'>\n" +
-                "\n" +
-                "            </div>";
-            document.getElementById("video").innerHTML = vid;
-
-
-
         })
 
         .catch(err => {
@@ -118,4 +109,18 @@ function returnText(data) {
         paragraph.innerHTML = text;
         document.getElementById("idTranslated").appendChild(paragraph);
     }
+}
+
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
