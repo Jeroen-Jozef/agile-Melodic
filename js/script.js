@@ -85,6 +85,14 @@ function getData(artist, song, countryCodeTranslation) {
                     })
             }
 
+            //attach video
+            let vid = "<div class='vid-container'>\n" +
+                "                <iframe class='vid' frameborder='0' wmode='Opaque' allowfullscreen='' src='https://www.youtube.com/embed/oqDRPoPDehE?wmode=transparent'>\n" +
+                "\n" +
+                "            </div>";
+            document.getElementById("video").innerHTML = vid;
+
+
 
         })
 
