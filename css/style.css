@@ -34,7 +34,8 @@
 }
 
 .reveal {
-
+    font-family: 'Anton', sans-serif;
+    font-size: 80px;
 }
 
 .slideIn {
