@@ -80,6 +80,9 @@ function getData(artist, song, countryCodeTranslation) {
                             document.querySelector("input[type='button']").disabled = false;
                         }
                     })
+                    .catch(err => {
+                        errorMsg("You cannot translate to this language");
+                    })
             }
 
 
