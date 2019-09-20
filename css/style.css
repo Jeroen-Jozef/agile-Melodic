@@ -83,6 +83,7 @@ footer ul{
     padding: 12px;
     margin: 20px;
     background-color: coral;
+    opacity: 1;
     border-radius: 10px;
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
@@ -157,10 +158,18 @@ footer ul{
 #myBtn:hover {
     background-color: #555;
 }
-
-.withPadding {
+.withPadding{
     padding-bottom: 50px;
-
+    font-size: 18px;
 
 }
-
+.toLeft{
+    padding-left: 20px;
+}
+#icons{
+    margin-right: 120px;
+}
+.withPadding strong{
+    display: block;
+    padding-bottom: 20px;
+}

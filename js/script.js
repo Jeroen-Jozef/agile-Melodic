@@ -2,6 +2,14 @@
 function reset(){
     document.getElementById("idOriginal").innerHTML = "";
     document.getElementById("idTranslated").innerHTML = "";
+    var strong1 = document.createElement("strong");
+    var text1 = document.createTextNode("Original Text");
+    var strong2 = document.createElement("strong");
+    var text2 = document.createTextNode("Translated Text");
+    strong1.append(text1);
+    strong2.append(text2);
+    document.getElementById("idOriginal").appendChild(strong1);
+    document.getElementById("idTranslated").appendChild(strong2);
 }
 
 //error message

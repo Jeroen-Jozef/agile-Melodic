@@ -26,6 +26,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
 
     <title>Melodic: translate your favourite songs</title>
 </head>
@@ -36,7 +37,7 @@
         <p class="reveal"><span class="showUp">Translate your songs</span></p>
     </section>
 </header>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse toLeft">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">MELODIC</a>
@@ -76,10 +77,14 @@
 <div class="parallax" id="id-parllax-image"></div>-->
 
 <section class="container">
-<div class="row justify-content-center withPadding">
+<div class="row justify-content-center text-center withPadding">
 
-        <div id="idOriginal" class="col-md-6 col-md-6 mt-3 original"></div>
-        <div id="idTranslated" class="col-md-6 col-md-6 mt-3 translated"></div>
+        <div id="idOriginal" class="col-md-6 col-md-6 mt-3 original">
+            <strong>Original Text</strong>
+        </div>
+        <div id="idTranslated" class="col-md-6 col-md-6 mt-3 translated">
+                <strong>Translated Text</strong>
+        </div>
 </div>
 
 </section>
@@ -123,7 +128,7 @@
         </div>
     </div>
     <section class="footer">
-        <div class="container text-left">
+        <div class="container text-left" id ="icons">
             <a href="#"><small style="color:white" class="fa fa-lg fa-skype pull-right"> </small></a>
             <a href="#"><small style="color:white" class="fa fa-lg fa-google-plus pull-right"> </small></a>
             <a href="#"><small style="color:white" class="fa fa-lg fa-linkedin pull-right"> </small></a>
@@ -131,6 +136,7 @@
             <a href="#"><small style="color:white" class="fa fa-lg fa-facebook pull-right"> </small></a>
         </div>
     </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 </footer>
 <script src="js/script.js"></script>
 </body>
