@@ -22,7 +22,7 @@
 
 .showUp {
     width:0px;
-    animation: reveal 7s infinite;
+    animation: reveal 5s 1;
 }
 
 @keyframes reveal {
@@ -33,21 +33,15 @@
     100% {opacity:0;width:355px;}
 }
 
-.reveal {
+.slideIN {
+    width:0px;
+    animation: slidein 7s 1;
 
-}
-
-.slideIn {
-    display: block;
-    margin-left:-355px;
-    animation: slidein 7s infinite;
 }
 
 @keyframes slidein {
-    0% { margin-left:-800px; }
-    20% { margin-left:-800px; }
-    35% { margin-left:0px; }
-    100% { margin-left:0px; }
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 footer {
