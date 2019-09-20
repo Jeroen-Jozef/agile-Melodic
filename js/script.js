@@ -85,6 +85,13 @@ function getData(artist, song, countryCodeTranslation) {
                     })
             }
 
+            fetchYoutubeLink("michael jackson", "bad")
+                .then(function (data) {
+                    console.log(data);
+                });
+
+
+
             //attach video
             let vid = "<div class='vid-container'>\n" +
                 "                <iframe class='vid' frameborder='0' wmode='Opaque' allowfullscreen='' src='https://www.youtube.com/embed/oqDRPoPDehE?wmode=transparent'>\n" +
@@ -118,4 +125,9 @@ function returnText(data) {
         paragraph.innerHTML = text;
         document.getElementById("idTranslated").appendChild(paragraph);
     }
+}
+
+async function fetchYoutubeLink(artist, song) {
+    let response = await fetch(`https://kashyap32-youtubetomp3-v1.p.rapidapi.com/%7B${artist} ${song}%7D`)
+    return response.json();
 }
