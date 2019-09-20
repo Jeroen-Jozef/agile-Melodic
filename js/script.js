@@ -49,7 +49,7 @@ function getData(artist, song, countryCodeTranslation) {
 
             text = xmlDoc.getElementsByTagName('Lyric')[0].innerHTML;
 
-            if (text ==""){
+            if (text == ""){
                 errorMsg("no data found");
                 return;
             }
