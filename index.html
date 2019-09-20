@@ -30,11 +30,11 @@
 
     <title>Melodic: translate your favourite songs</title>
 </head>
-<body>
+<body class="parallax" id="id-parllax-image">
 <header>
     <section class="header">
         <img src="img/logo.png" alt="Melodic logo">
-        <p class="reveal"><span class="showUp">Translate&nbsp;</span><span class=""slideIn>your songs</span></p>
+        <p class="reveal"><span class="showUp">Translate your songs</span></p>
     </section>
 </header>
 <nav class="navbar navbar-inverse">
@@ -73,16 +73,17 @@
         </form>
     </div>
 </nav>
-<!-- parallax -->
-<div class="parallax" id="id-parllax-image"></div>
+<!-- parallax
+<div class="parallax" id="id-parllax-image"></div>-->
 
-<div class="container container-translation">
-    <section id="idTranslation" class="row justify-content-center">
-        <div id="idOriginal" class="col-md-6 mt-md-0 mt-3"></div>
-        <div id="idTranslated" class="col-md-6 mt-md-0 mt-3"></div>
+<section class="container text-center">
+<div class="row">
 
-    </section>
+        <div id="idOriginal" class="col-md-6 col-md-0 mt-3 original"></div>
+        <div id="idTranslated" class="col-md-6 col-md-0 mt-3 translated"></div>
 </div>
+
+</section>
 <!-- parallax-->
 <div class="parallax" id="id-parllax-image1"></div>
 
@@ -131,7 +132,6 @@
             <a href="#"><small style="color:white" class="fa fa-lg fa-facebook pull-right"> </small></a>
         </div>
     </section>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 </footer>
 <script src="js/script.js"></script>
 </body>

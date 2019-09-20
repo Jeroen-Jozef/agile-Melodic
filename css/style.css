@@ -22,7 +22,7 @@
 
 .showUp {
     width:0px;
-    animation: reveal 7s infinite;
+    animation: reveal 5s 1;
 }
 
 @keyframes reveal {
@@ -44,12 +44,6 @@
     animation: slidein 7s infinite;
 }
 
-@keyframes slidein {
-    0% { margin-left:-800px; }
-    20% { margin-left:-800px; }
-    35% { margin-left:0px; }
-    100% { margin-left:0px; }
-}
 
 footer {
     background-color: #333333;
