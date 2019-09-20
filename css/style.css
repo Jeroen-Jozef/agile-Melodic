@@ -33,16 +33,9 @@
     100% {opacity:0;width:355px;}
 }
 
-.slideIN {
-    width:0px;
-    animation: slidein 7s 1;
 
-}
 
-@keyframes slidein {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
+
 
 footer {
     background-color: #333333;
@@ -135,6 +128,7 @@ footer ul{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url("../img/youare.jpeg"), url("../img/themusic.jpeg");
 }
 
 #id-parllax-image {
@@ -166,6 +160,7 @@ footer ul{
 
 .withPadding {
     padding-bottom: 50px;
-    padding-right: 50px;
+
+
 }
 
