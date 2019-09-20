@@ -85,13 +85,6 @@ function getData(artist, song, countryCodeTranslation) {
                     })
             }
 
-            fetchYoutubeLink("michael jackson", "bad")
-                .then(function (data) {
-                    console.log(data);
-                });
-
-
-
             //attach video
             let vid = "<div class='vid-container'>\n" +
                 "                <iframe class='vid' frameborder='0' wmode='Opaque' allowfullscreen='' src='https://www.youtube.com/embed/oqDRPoPDehE?wmode=transparent'>\n" +
@@ -127,7 +120,16 @@ function returnText(data) {
     }
 }
 
-async function fetchYoutubeLink(artist, song) {
-    let response = await fetch(`https://kashyap32-youtubetomp3-v1.p.rapidapi.com/%7B${artist} ${song}%7D`)
-    return response.json();
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
