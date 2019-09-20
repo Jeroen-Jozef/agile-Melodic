@@ -106,8 +106,17 @@ footer ul{
     width: 20vw;
 
 }
+.container-translation{
+    /*position: relative;
+    top: -300px;
+
+     */
+}
 #idTranslation{
     display: flex;
+    padding-top: 20px;
+    padding-bottom: 25px;
+
 }
 .footer a:hover {
     padding: 20px;
@@ -120,17 +129,18 @@ footer ul{
     opacity: 0.7;
 }
 
+
 #idSearchButton {
     margin-top: -5px;
 }
 
 .parallax {
     height: 500px;
+    margin: -21px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 #id-parllax-image {
