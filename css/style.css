@@ -1,6 +1,7 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 0 auto;
+    box-sizing: border-box;
 }
 .header {
     padding: 100px;
@@ -48,14 +49,21 @@ footer ul{
     width: 35vw;
     min-height: 200px;
     margin: 20px;
+    padding: 12px;
     background-color: goldenrod;
 }
 
 #idTranslated {
     width: 35vw;
     min-height: 200px;
+    padding: 12px;
     margin: 20px;
     background-color: coral;
+}
+#video{
+    margin-top: 20px;
+    width: 20vw;
+
 }
 #idTranslation{
     display: flex;
