@@ -18,6 +18,37 @@
     margin-top: -50px;
     margin-left: -30px;
 }
+
+.showUp {
+    width:0px;
+    animation: reveal 7s infinite;
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+.reveal {
+
+}
+
+.slideIn {
+    display: block;
+    margin-left:-355px;
+    animation: slidein 7s infinite;
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
 footer {
     background-color: #333333;
     color: white;
@@ -40,15 +71,18 @@ footer h4{
     color: #ED4F06;
 }
 footer ul{
-    line-height:2em
+    line-height:2em;
 }
-
 
 #idOriginal {
     width: 35vw;
     min-height: 200px;
     margin: 20px;
     background-color: goldenrod;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 #idTranslated {
@@ -56,6 +90,10 @@ footer ul{
     min-height: 200px;
     margin: 20px;
     background-color: coral;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 #idTranslation{
     display: flex;
@@ -72,8 +110,8 @@ footer ul{
     opacity: 0.7;
 }
 
-
 #idSearchButton {
     margin-top: -5px;
 }
+
 
