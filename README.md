@@ -5,7 +5,7 @@ In this exercise we (see below) are learning the agile philosopy through the Scr
 * api.chartlyrics for getting the song lyrics
 * translate.yandex.net to actually translate the songs
 
-## Objecives
+## Objectives
 * Learn to work in groups with an Agile approach
 * Learn the value of stand up meetings and SCRUM
 * Use some AB testing
