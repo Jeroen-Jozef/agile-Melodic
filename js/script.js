@@ -109,10 +109,10 @@ function scrollFunction() {
         mybutton.style.display = "none";
     }
 }
-/*function topFunction() {
+function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-}*/
+}
 
 window.onscroll = function() {scrollFunction()};
 
