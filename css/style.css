@@ -1,6 +1,7 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 0 auto;
+    box-sizing: border-box;
 }
 .header {
     padding: 100px;
@@ -81,6 +82,7 @@ footer ul{
     width: 35vw;
     min-height: 200px;
     margin: 20px;
+    padding: 12px;
     background-color: goldenrod;
     border-radius: 10px;
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
@@ -91,12 +93,18 @@ footer ul{
 #idTranslated {
     width: 35vw;
     min-height: 200px;
+    padding: 12px;
     margin: 20px;
     background-color: coral;
     border-radius: 10px;
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+#video{
+    margin-top: 20px;
+    width: 20vw;
+
 }
 #idTranslation{
     display: flex;
