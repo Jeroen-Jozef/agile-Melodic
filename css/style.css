@@ -164,3 +164,6 @@ footer ul{
 #myBtn:hover {
     background-color: #555;
 }
+.withPadding{
+    padding-bottom: 50px;
+}
