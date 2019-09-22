@@ -17,13 +17,11 @@
 
     <meta charset="UTF-8">
     <meta name="description" content="Translate your favourite songs online, from any language into any language">
-    <meta name="viewport" content="width=device-width initial-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
 
     <title>Melodic: translate your favourite songs</title>
@@ -35,6 +33,7 @@
         <p class="reveal"><span class="showUp">Translate your songs</span></p>
     </section>
 </header>
+
 <nav class="navbar navbar-inverse toLeft">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -71,30 +70,27 @@
         </form>
     </div>
 </nav>
-<!-- parallax
-<div class="parallax" id="id-parllax-image"></div>-->
 
 <section class="container">
-<div class="row justify-content-center text-center withPadding">
-
-        <div id="idOriginal" class="col-md-6 col-md-6 mt-3 original">
+    <div class="row justify-content-center text-center withPadding">
+        <div class="col-md-6 p-b">
+        <div id="idOriginal" class="col-md-12 original">
             <strong>Original Text</strong>
         </div>
-        <div id="idTranslated" class="col-md-6 col-md-6 mt-3 translated">
-                <strong>Translated Text</strong>
         </div>
-</div>
-
+        <div class="col-md-6 p-b">
+        <div id="idTranslated" class="col-md-12 translated">
+            <strong>Translated Text</strong>
+        </div>
+        </div>
+    </div>
 </section>
-<!-- parallax
-<div class="parallax" id="id-parllax-image1"></div>-->
-
 <footer class="footer mt-5">
     <div class="container">
         <div class="row">
             <div class="col-md-6 mt-md-0 mt-3">
-                <h4 class="text-uppercase ">MELODIC</h4>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 100px;">
+                <h4>MELODIC</h4>
+                <hr style="width: 100px;">
                 <p class="text-justify">Have you ever listened to a song that you thought
                     was very beautiful, but in a language you do not understand?
                     That is exactly what Melodic had in mind when we started our
@@ -103,30 +99,33 @@
                     Hope to be hearing from you!
                 </p>
             </div>
+
             <div class="container">
-                <address class="col-xs-6 col-md-3">
-                    <h4 class="text-uppercase font-weight-bold">Contact Us</h4>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 80px;">
+                <div class="row col-xs-6 col-md-3 col-md-offset-1 address">
+                    <h4 class="text-uppercase">Contact Us</h4>
+                    <hr style="width: 80px;">
                     <ul class="list-unstyled">
                         <li>Sint-Pietersvliet 7</li>
                         <li>2000 Antwerpen</li>
                         <li>Belgium</li>
-                        <li class="email"><a href="mailto:melodicbvba@gmail.com">moc.liamg@abvbcidolem</a></li>
+                        <li class="email">
+                            <a href="mailto:melodicbvba@gmail.com" id="email">moc.liamg@abvbcidolem</a>
+                        </li>
                     </ul>
-                </address>
+                </div>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-6 col-xs-12">
-                <small style="color:grey" class="copyright">Copyright &copy 2019 All Rights Reserved.</small>
-                <a href="#">MELODIC</a>
+                <small style="color:grey" class="copyright">Copyright &amp;copy 2019 All Rights Reserved.</small>
+                <a href="#" class="link-footer">MELODIC</a>
             </div>
         </div>
     </div>
     <section class="footer">
-        <div class="container text-left" id ="icons">
+        <div class="container text-left" id="icons">
             <a href="#"><small style="color:white" class="fa fa-lg fa-skype pull-right"> </small></a>
             <a href="#"><small style="color:white" class="fa fa-lg fa-google-plus pull-right"> </small></a>
             <a href="#"><small style="color:white" class="fa fa-lg fa-linkedin pull-right"> </small></a>

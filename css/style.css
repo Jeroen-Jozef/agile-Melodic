@@ -22,21 +22,17 @@
 }
 
 .showUp {
-    width:0px;
+    width: 0;
     animation: reveal 5s 1;
 }
 
 @keyframes reveal {
-    0% {opacity:0;width:0px;}
-    20% {opacity:1;width:0px;}
+    0% {opacity:0;width:0;}
+    20% {opacity:1;width:0;}
     30% {width:355px;}
     80% {opacity:1;}
     100% {opacity:0;width:355px;}
 }
-
-
-
-
 
 footer {
     background-color: #333333;
@@ -49,18 +45,19 @@ footer {
 }
 .email {
     unicode-bidi: bidi-override;
-    direction: rtl;
 }
-address h4{
+#email:hover,
+.link-footer:hover{;
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+}
+
+.address h4{
     color: #ED4F06;
 }
 
-address{
-    margin-left: 100px;
-}
-address a{
-    padding-right: 0px;
-    margin-right: 0px;
+.address a{
     color: #ED4F06 ;
 }
 
@@ -71,11 +68,8 @@ footer ul{
     line-height:2em;
 }
 
-
 #idOriginal {
-    width: 35vw;
     min-height: 200px;
-    margin: 20px;
     padding: 12px;
     background-color: goldenrod;
     border-radius: 10px;
@@ -85,35 +79,26 @@ footer ul{
 }
 
 #idTranslated {
-    width: 35vw;
     min-height: 200px;
     padding: 12px;
-    margin: 20px;
     background-color: coral;
-    opacity: 1;
     border-radius: 10px;
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
-#video{
-    margin-top: 20px;
-    width: 20vw;
-
+.p-b {
+    padding-bottom: 20px;
 }
 .container-translation{
-    /*position: relative;
-    top: -300px;
-
-     */
 }
 #idTranslation{
     display: flex;
     padding-top: 20px;
     padding-bottom: 25px;
-
 }
-.footer a:hover {
+
+#icons a:hover {
     padding: 20px;
     font-size: 30px;
     width: 30px;
@@ -122,32 +107,19 @@ footer ul{
     margin: 5px 2px;
     color: white;
     opacity: 0.7;
-
 }
-
 
 #idSearchButton {
     margin-top: -5px;
 }
 
 .parallax {
-    height: 500px;
-    margin: -21px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/youare.jpeg"), url("../img/themusic.jpeg");
-}
-
-#id-parllax-image {
     background-image: url("../img/youare.jpeg");
 }
-
-#id-parllax-image1 {
-    background-image: url("../img/themusic.jpeg");
-}
-
 #myBtn {
     display: none;
     position: fixed;
@@ -167,15 +139,13 @@ footer ul{
     background-color: #555;
 }
 .withPadding{
-    padding-bottom: 50px;
     font-size: 18px;
-
 }
 .toLeft{
     padding-left: 20px;
 }
 #icons{
-    margin-right: 120px;
+    padding-right: 100px;
 }
 .withPadding strong{
     display: block;
