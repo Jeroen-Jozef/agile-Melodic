@@ -24,7 +24,6 @@
 
      */
 }
-
 .showUp {
     width: 0;
     animation: reveal 5s 1;
@@ -134,7 +133,10 @@ footer ul{
 #idSearchButton {
     margin-top: -5px;
 }
-
+.myNav{
+    padding-top: 6px;
+    /*margin-bottom: 20px;*/
+}
 .parallax {
     background-attachment: fixed;
     background-position: center;
@@ -163,8 +165,15 @@ footer ul{
 .withPadding{
     font-size: 18px;
 }
-.toLeft{
-    padding-left: 20px;
+.container-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-box{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #222222;
 }
 #icons{
     padding-right: 100px;
