@@ -20,14 +20,17 @@
 .showUp {
     width: 0;
     animation: reveal 5s 1;
+
 }
 
 @keyframes reveal {
-    0% {opacity:0;width:0;}
-    20% {opacity:1;width:0;}
-    30% {width:355px;}
+    0% {opacity:0;}
+    20% {opacity:1;
     80% {opacity:1;}
-    100% {opacity:0;width:355px;}
+    100% {opacity:0
+
+
+    }
 }
 .container-header{
     display: flex;
