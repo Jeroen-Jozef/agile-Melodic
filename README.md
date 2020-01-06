@@ -9,7 +9,7 @@ In this exercise we (see below) are learning the agile philosopy through the Scr
 * Learn to work in groups with an Agile approach
 * Learn the value of stand up meetings and SCRUM
 * Use some AB testing
-* use google analytics
+* Use google analytics
 
 ## Collaborators
 [Ines Abbes](https://github.com/InesAbbes/)
@@ -19,6 +19,9 @@ In this exercise we (see below) are learning the agile philosopy through the Scr
 [Bernardo Martelli](https://github.com/bermarte/)
 
 [Jeroen Hendrickx](https://github.com/Jeroen-Jozef/)
+
+
+[Visit the website](https://bermarte.github.io/Project/agile_Melodic/)
 
 
 <!--
